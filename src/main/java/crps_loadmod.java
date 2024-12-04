@@ -1,4 +1,3 @@
-import crps.crps_lantern_object;
 import crps.crps_lantern_wall_object;
 import crps.crps_streetlight_single_object;
 import necesse.engine.modLoader.annotations.ModEntry;
@@ -9,7 +8,7 @@ import necesse.inventory.item.toolItem.ToolType;
 import necesse.inventory.recipe.Ingredient;
 import necesse.inventory.recipe.Recipe;
 import necesse.inventory.recipe.Recipes;
-import necesse.level.gameObject.ColumnObject;
+import necesse.level.gameObject.TorchObject;
 import necesse.level.gameObject.WallObject;
 import necesse.level.gameObject.furniture.*;
 import necesse.level.gameTile.SimpleFloorTile;
@@ -58,7 +57,8 @@ public class crps_loadmod {
 
 
         //here we go with adding lanterns and it's derivatives to the game! I am considering adding lanterns made of different metals but that will come later, probably.
-        ObjectRegistry.registerObject("crps_lantern", new crps_lantern_object("crps_lantern"), 2.0F,true);
+        //ObjectRegistry.registerObject("crps_lantern", new crps_lantern_object("crps_lantern", ), 2.0F,true);
+        ObjectRegistry.registerObject("crps_lantern", new TorchObject("crps_lantern", ToolType.ALL, new Color(240, 200, 10), 50.0F, 0.2F), 4.0F, true);
         //ObjectRegistry.registerObject("crps_lantern_copper", new crps_lantern_object("crps_lantern_copper"), 10.0F,true);
         ObjectRegistry.registerObject("crps_lantern_wall", new crps_lantern_wall_object("crps_lantern_wall"), 3.0F,true);
 
@@ -167,8 +167,8 @@ public class crps_loadmod {
 
 
         //lanterns
-        Recipes.registerModRecipe(new Recipe("crps_lantern",2,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("torch",2), new Ingredient("ironbar",1)},true));
-        Recipes.registerModRecipe(new Recipe("crps_lantern_wall",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("ironbar",1), new Ingredient("crps_lantern",1)},true));
+        Recipes.registerModRecipe(new Recipe("crps_lantern",1,RecipeTechRegistry.IRON_ANVIL, new Ingredient[] {new Ingredient("ironbar",1)},true));
+        Recipes.registerModRecipe(new Recipe("crps_lantern_wall",1,RecipeTechRegistry.IRON_ANVIL, new Ingredient[] {new Ingredient("ironbar",1), new Ingredient("crps_lantern",1)},true));
         //streetlights
         Recipes.registerModRecipe(new Recipe("crps_streetlight_single",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("crps_lantern",1), new Ingredient("anylog",6), new Ingredient("anystone",4)},true));
         Recipes.registerModRecipe(new Recipe("crps_streetlight_double",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("crps_lantern",2), new Ingredient("anylog",6), new Ingredient("anystone",4)},true));
@@ -191,12 +191,12 @@ public class crps_loadmod {
         Recipes.registerModRecipe(new Recipe("deepsnowstonetiledfloor",1,RecipeTechRegistry.ADVANCED_WORKSTATION, new Ingredient[] {new Ingredient("deepsnowstone",1)},true));
 
         //{deepsandstonecolumn, 1, carpenter, INGREDIENTS{{deepsandstone, 20}}, true}
-        Recipes.registerModRecipe(new Recipe("deepsnowstonecolumn",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("deepsnowstone",20)},true));
+        //Recipes.registerModRecipe(new Recipe("deepsnowstonecolumn",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("deepsnowstone",20)},true));
 
 
         Recipes.registerModRecipe(new Recipe("deepswampstonetiledfloor",1,RecipeTechRegistry.ADVANCED_WORKSTATION, new Ingredient[] {new Ingredient("deepswampstone",1)},true));
-        Recipes.registerModRecipe(new Recipe("deepstonecolumn",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("deepstone",20)},true));
-        Recipes.registerModRecipe(new Recipe("deepswampstonecolumn",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("deepswampstone",20)},true));
+       //Recipes.registerModRecipe(new Recipe("deepstonecolumn",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("deepstone",20)},true));
+       //Recipes.registerModRecipe(new Recipe("deepswampstonecolumn",1,RecipeTechRegistry.CARPENTER, new Ingredient[] {new Ingredient("deepswampstone",20)},true));
 
 
         //Deep Sandstone Floors

@@ -19,12 +19,12 @@ goldfloor=Gold Floor
 
 [object]
 
-crps_lantern=Lantern
-crps_lantern_wall=Wall Lantern
+crps_lantern=Iron Lantern
+crps_lantern_wall=Iron Wall Lantern
 
-crps_streetlight_single=Single Street Light
-crps_streetlight_double=Double Street Light
-crps_streetlight_quad=Quadruple Street Light
+crps_streetlight_single=Single Archaic Street Light
+crps_streetlight_double=Double Archaic Street Light
+crps_streetlight_quad=Quadruple Archaic Street Light
 
 
 woodwall=Treated Wood Wall

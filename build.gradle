@@ -7,8 +7,8 @@ plugins {
 
 project.ext.modID = "jake.carpenterssalvation" // The unique id of your mod. Must be all lowercase and cannot use special characters.
 project.ext.modName = "Carpenters Salvation" // The display name of your mod.
-project.ext.modVersion = "0.3.0.4" // Your current builds version. Must follow the xx.xx... format.
-project.ext.gameVersion = "0.21.29" // The target game version.
+project.ext.modVersion = "0.3.0.5" // Your current builds version. Must follow the xx.xx... format.
+project.ext.gameVersion = "0.24.1" // The target game version.
 project.ext.modDescription = "New building objects to spice up your builds." // Short description of what your mod is.
 project.ext.author = "JC Bentem" // Your name
 
